@@ -16,6 +16,7 @@
   </head>
   <body>
     <div class="container">
+       <div class="weatherapp-wrapper">
       <div class="weatherapp">
         <h1 id="city">Osaka</h1>
         <button id="current-button">Current City</button>
@@ -31,7 +32,7 @@
               <p class="current-text">
                 <span class="description" id="description">Mostly sunny</span>
                 <br />
-                <span class="temperature" id="temperature">13℃</span>
+                <span class="temperature" id="temperature">13</span><small><span class="units">°C | <a href="#">°F</a></span></small>
                 <br />
               </p>
             </div>
@@ -78,8 +79,9 @@
                <input type="text" placeholder="Enter city name" autofocus="on" id="city-input" />
              </form>
       </div>
-    </div>
-     <center><a href="https://github.com/B1-chan/weather-app" alt="github-link" target="_blank">Open-source code</a> by Bianca Mitsuoka</center>
+  </div>
+   <small><a href="https://github.com/B1-chan/weather-app" alt="github-link" target="_blank">Open-source code</a> by Bianca Mitsuoka</small>
+   </div>
     <script src="src/script.js"></script>
   </body>
 </html>
