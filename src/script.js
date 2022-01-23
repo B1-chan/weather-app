@@ -7,6 +7,7 @@ function getCurrentTemp(response) {
   let description = response.data.weather[0].description;
   let humidityElement = document.querySelector("#humidity");
   let windElement = document.querySelector("#wind");
+  let precipitationElement = document.querySelector("#precipitation");
   let feelsLikeCelsiusElement = document.querySelector("#feels-like-celsius");
   let feelsLikeFahrenheitElement = document.querySelector(
     "#feels-like-fahrenheit"
@@ -17,6 +18,7 @@ function getCurrentTemp(response) {
   forecast.innerHTML = `${description}`;
   humidityElement.innerHTML = response.data.main.humidity;
   windElement.innerHTML = Math.round(response.data.wind.speed);
+  precipitationElement.innerHTML = response.data.precipitation.value;
   feelsLikeCelsiusElement.innerHTML = Math.round(response.data.main.feels_like);
   feelsLikeFahrenheitElement.innerHTML = Math.round(
     response.data.main.feels_like
@@ -51,9 +53,6 @@ function searchCityTemp(event) {
 
 let searchCity = document.querySelector("form");
 searchCity.addEventListener("submit", searchCityTemp);
-
-let apiKey = "b17588c7696fb561b494319a7441ef17";
-let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=Osaka&appid=${apiKey}&units=metric`;
 
 let dateElement = document.querySelector("#date");
 let currentTime = new Date();

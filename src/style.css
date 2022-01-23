@@ -24,7 +24,8 @@ img {
 form {
   font-family: "Roboto Mono", monospace;
   position: relative;
-  top: -30px;
+  top: -50px;
+  left: 400px;
 }
 
 input {
@@ -107,4 +108,18 @@ button {
 
 .description {
   text-transform: capitalize;
+}
+
+.btn {
+  background: rgb(97, 62, 194);
+  color: white;
+  font-family: "Roboto Mono", monospace;
+  font-size: 14px;
+  font-weight: lighter;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+  transition: all 200ms ease-in-out;
+  left: -50px;
 }

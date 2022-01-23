@@ -41,7 +41,7 @@
             <div class="col">
               <ul class="current-info">
                 <li>Feels like: <span id="feels-like-celsius"></span>°C | <span id="feels-like-fahrenheit"></span>°F</li>
-                <li>Precipitation: 10%</li>
+                <li>Precipitation: <span id="precipitation"></span>%</li>
                 <li>Humidity: <span id="humidity"></span>%</li>
                 <li>Wind: <span id="wind"></span> km/h</li>
               </ul>
@@ -73,10 +73,11 @@
               </div>
             </div>
           </div>
-          <form id="city-form">
-               <input type="submit" value="Check weather"/>      
-               <input type="text" placeholder="Enter city name" autofocus="on" id="city-input" />
-             </form>
+          <form id="city-form"> <div class="row"><div class="col-4">
+               <input type="search" placeholder="Enter city name" class="form-control" autofocus="on" id="city-input" /></div>
+<div class="col-3"> <input type="submit" value="Check weather" class="btn"/></div>      
+             </div>
+            </form>
       </div>
   </div>
    <small><a href="https://github.com/B1-chan/weather-app" alt="github-link" target="_blank">Open-source code</a> by Bianca Mitsuoka</small>
