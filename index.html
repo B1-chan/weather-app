@@ -18,7 +18,7 @@
     <div class="container">
        <div class="weatherapp-wrapper">
       <div class="weatherapp">
-        <h1 id="city">Osaka</h1>
+        <h1 id="city"></h1>
         <button id="current-button">Current City</button>
         <br />
                         <div class="row">
@@ -30,9 +30,9 @@
               </ul>
               <img src="images/sun.jpg" alt="sunny" width="60%" />
               <p class="current-text">
-                <span class="description" id="description">Mostly sunny</span>
+                <span class="description" id="description"></span>
                 <br />
-                <span class="temperature" id="temperature">13</span><small><span class="units">°C | <a href="#">°F</a></span></small>
+                <span class="temperature" id="temperature"></span><small><span class="units">°C | <a href="#">°F</a></span></small>
                 <br />
               </p>
             </div>
@@ -40,11 +40,10 @@
           <div class="info">
             <div class="col">
               <ul class="current-info">
-                <li>Feels like: 13℃ / 55°F</li>
+                <li>Feels like: <span id="feels-like-celsius"></span>°C | <span id="feels-like-fahrenheit"></span>°F</li>
                 <li>Precipitation: 10%</li>
-                <li>Humidity: 47%</li>
-                <li>UV index: 3 Moderate</li>
-                <li>Wind: 12-28km/h</li>
+                <li>Humidity: <span id="humidity"></span>%</li>
+                <li>Wind: <span id="wind"></span> km/h</li>
               </ul>
               <hr />
               <p class="forecast">Forecast</p>

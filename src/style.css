@@ -104,3 +104,7 @@ button {
 .fahrenheit {
   font-weight: bold;
 }
+
+.description {
+  text-transform: capitalize;
+}
