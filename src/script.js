@@ -68,7 +68,7 @@ function getCurrentTemp(response) {
   humidityElement.innerHTML = response.data.main.humidity;
   windElement.innerHTML = Math.round(response.data.wind.speed);
   feelsLikeCelsiusElement.innerHTML = Math.round(response.data.main.feels_like);
-  let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
+  let fahrenheitTemperature = (response.data.main.feels_like * 9) / 5 + 32;
   feelsLikeFahrenheitElement.innerHTML = Math.round(fahrenheitTemperature);
 
   iconElement.setAttribute(
