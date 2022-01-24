@@ -104,9 +104,6 @@ function searchCityTemp(event) {
   axios.get(searchUrl).then(getCurrentTemp);
 }
 
-let searchCity = document.querySelector("form");
-searchCity.addEventListener("submit", searchCityTemp);
-
 function displayFahrenheitTemperature(event) {
   event.preventDefault();
   let tempertureElement = document.querySelector("#temperature");
@@ -125,6 +122,9 @@ function displayCelsiusTemperature(event) {
 }
 
 let celsiusTemperature = null;
+
+let searchCity = document.querySelector("form");
+searchCity.addEventListener("submit", searchCityTemp);
 
 let fahrenheitLink = document.querySelector("#fahrenheit-link");
 fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);

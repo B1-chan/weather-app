@@ -98,17 +98,24 @@ button {
   font-weight: bold;
 }
 
+.description {
+  text-transform: capitalize;
+}
+
 .units {
   position: relative;
   top: -15px;
 }
 
-.fahrenheit {
-  font-weight: bold;
+.active {
+  color: black;
+  text-decoration: none;
+  cursor: default;
 }
 
-.description {
-  text-transform: capitalize;
+.active:hover {
+  text-decoration: none;
+  cursor: default;
 }
 
 .btn {
@@ -124,15 +131,4 @@ button {
   transition: all 200ms ease-in-out;
   position: relative;
   left: -55px;
-}
-
-.units .active {
-  color: black;
-  text-decoration: none;
-  cursor: default;
-}
-
-.units .active:hover {
-  text-decoration: none;
-  cursor: default;
 }
