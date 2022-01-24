@@ -25,7 +25,7 @@ form {
   font-family: "Roboto Mono", monospace;
   position: relative;
   top: -50px;
-  left: 400px;
+  left: 385px;
 }
 
 input {
@@ -82,6 +82,7 @@ button {
   max-width: 350px;
   margin: 0 0 auto;
   margin-right: auto;
+  margin-top: 15px;
 }
 
 .current-text {
@@ -116,10 +117,22 @@ button {
   font-family: "Roboto Mono", monospace;
   font-size: 14px;
   font-weight: lighter;
-  padding: 10px 15px;
+  padding: 10px 10px;
   border: none;
   border-radius: 10px;
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
   transition: all 200ms ease-in-out;
-  left: -50px;
+  position: relative;
+  left: -55px;
+}
+
+.units .active {
+  color: black;
+  text-decoration: none;
+  cursor: default;
+}
+
+.units .active:hover {
+  text-decoration: none;
+  cursor: default;
 }
