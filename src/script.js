@@ -5,7 +5,6 @@ function search(city) {
   axios.get(apiUrl).then(getCurrentTemp);
 }
 search("Osaka");
-displayForecast();
 
 let dateElement = document.querySelector("#date");
 let currentTime = new Date();
@@ -46,26 +45,48 @@ if (minutes < 10) {
 }
 dateElement.innerHTML = `${days[dayIndex]}, ${months[monthIndex]} ${date}, ${hours}:${minutes}`;
 
-function displayForecast() {
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let day = date.getDay();
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+
+  return days[day];
+}
+
+function displayForecast(response) {
+  let forecast = response.data.daily;
   let forecastElement = document.querySelector("#forecast");
 
   let forecastHTML = `<div class="row">`;
-  let days = ["Thu", "Fri", "Sat"];
-  days.forEach(function (day) {
-    forecastHTML =
-      forecastHTML +
-      `
+  forecast.forEach(function (forecastDay, index) {
+    if (index < 4) {
+      forecastHTML =
+        forecastHTML +
+        `
                 <div class="col-3">
-                  <img src=images/01d.jpg alt="sun" width="80%" />
+                  <img src="images/${
+                    forecastDay.weather[0].icon
+                  }.jpg" alt="sun" width="80%" />
                 <div class="forecast-temperatures">
-                  <span class="forecast-temperature-max">18° </span><span class="forecast-temperature-min">12° </span>
+                  <span class="forecast-temperature-max">${Math.round(
+                    forecastDay.temp.max
+                  )}° </span><span class="forecast-temperature-min">${Math.round(
+          forecastDay.temp.min
+        )}° </span>
                  </div>
-                <div class="forecast-date">${day}</div>
+                <div class="forecast-date">${formatDay(forecastDay.dt)}</div>
               </div>
   `;
+    }
   });
   forecastHTML = forecastHTML + `</div>`;
   forecastElement.innerHTML = forecastHTML;
+}
+
+function getForecast(coordinates) {
+  let apiKey = "b17588c7696fb561b494319a7441ef17";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayForecast);
 }
 
 function getCurrentTemp(response) {
@@ -99,6 +120,8 @@ function getCurrentTemp(response) {
     `images/${response.data.weather[0].icon}.jpg`
   );
   iconElement.setAttribute("alt", response.data.weather[0].description);
+
+  getForecast(response.data.coord);
 }
 
 function getCurrentCityTemp(event) {
