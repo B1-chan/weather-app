@@ -38,49 +38,30 @@
             </div>
           </div>
           <div class="info">
-            <div class="col">
               <ul class="current-info">
                 <li>Feels like: <span id="feels-like-celsius"></span>°C | <span id="feels-like-fahrenheit"></span>°F</li>
                 <li>Humidity: <span id="humidity"></span>%</li>
                 <li>Wind: <span id="wind"></span> km/h</li>
               </ul>
               <hr />
-              <p class="forecast">Forecast</p>
+              <div class="weather-forecast" id="forecast">
               <div class="row">
-                <div class="col-sm">
-                  <img src=images/01d.jpg alt="sun" width="100%" />
-                </div>
-                <div class="col-sm">
-                  <img src=images/02d.jpg alt="cloud-sun" width="100%" />
-                </div>
-                <div class="col-sm">
-                  <img src=images/03d.jpg alt="cloudy" width="100%" />
-                </div>
-                <div class="col-sm">
-                  <img src=images/01d.jpg alt="sun" width="100%" />
-                </div>
-                <div class="col-sm">
-                  <img src=images/03d.jpg alt="cloudy" width="100%" />
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-sm">Thu</div>
-                <div class="col-sm">Fri</div>
-                <div class="col-sm">Sat</div>
-                <div class="col-sm">Sun</div>
-                <div class="col-sm">Mon</div>
-              </div>
-            </div>
-          </div>
-          <form id="city-form"> <div class="row"><div class="col-4">
+                <div class="col-3">
+                  <img src=images/01d.jpg alt="sun" width="90%" />
+                <div class="forecast-temperatures">
+                  <span class="forecast-temperature-max">18° </span><span class="forecast-temperature-min">12° </span>
+                 </div>
+                <div class="forecast-date">Thu</div>
+              </div></div></div>
+          <form id="city-form"> <div class="row"><div class="col-8">
                <input type="search" placeholder="Enter city name" class="form-control" autofocus="on" id="city-input" /></div>
-<div class="col-3"> <input type="submit" value="Check weather" class="btn"/></div>      
+<div class="col-4"> <input type="submit" value="Check weather" class="btn"/></div>      
              </div>
             </form>
       </div>
   </div>
-   <small><a href="https://github.com/B1-chan/weather-app" alt="github-link" target="_blank">Open-source code</a> by Bianca Mitsuoka</small>
    </div>
+     <center><small><a href="https://github.com/B1-chan/weather-app" alt="github-link" target="_blank">Open-source code</a> by Bianca Mitsuoka</small></center>
     <script src="src/script.js"></script>
   </body>
 </html>

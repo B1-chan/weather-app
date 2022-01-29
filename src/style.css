@@ -24,8 +24,7 @@ img {
 form {
   font-family: "Roboto Mono", monospace;
   position: relative;
-  top: -50px;
-  left: 385px;
+  top: 55px;
 }
 
 input {
@@ -89,7 +88,7 @@ button {
   text-align: center;
 }
 
-.col-sm {
+.forecast {
   text-align: center;
 }
 
@@ -130,5 +129,18 @@ button {
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
   transition: all 200ms ease-in-out;
   position: relative;
-  left: -55px;
+  left: 25px;
+}
+
+.col-3 {
+  text-align: center;
+}
+
+.forecast-temperature-min {
+  font-size: 14px;
+  opacity: 0.5;
+}
+
+.forecast-date {
+  text-align: center;
 }

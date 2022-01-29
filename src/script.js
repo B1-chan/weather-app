@@ -5,6 +5,7 @@ function search(city) {
   axios.get(apiUrl).then(getCurrentTemp);
 }
 search("Osaka");
+displayForecast();
 
 let dateElement = document.querySelector("#date");
 let currentTime = new Date();
@@ -44,6 +45,28 @@ if (minutes < 10) {
   minutes = `0${minutes} `;
 }
 dateElement.innerHTML = `${days[dayIndex]}, ${months[monthIndex]} ${date}, ${hours}:${minutes}`;
+
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+
+  let forecastHTML = `<div class="row">`;
+  let days = ["Thu", "Fri", "Sat"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+                <div class="col-3">
+                  <img src=images/01d.jpg alt="sun" width="80%" />
+                <div class="forecast-temperatures">
+                  <span class="forecast-temperature-max">18° </span><span class="forecast-temperature-min">12° </span>
+                 </div>
+                <div class="forecast-date">${day}</div>
+              </div>
+  `;
+  });
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
 
 function getCurrentTemp(response) {
   let h1 = document.querySelector("h1");
