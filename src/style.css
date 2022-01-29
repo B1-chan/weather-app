@@ -5,6 +5,9 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Itim", cursive;
+  background: url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/025/887/original/back.jpg?1643433414);
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 h1 {
@@ -73,6 +76,7 @@ button {
   border-radius: 5px;
   max-width: 350px;
   margin: auto;
+  background: white;
 }
 
 .info {
@@ -81,7 +85,7 @@ button {
   max-width: 350px;
   margin: 0 0 auto;
   margin-right: auto;
-  margin-top: 15px;
+  background-color: white;
 }
 
 .current-text {
