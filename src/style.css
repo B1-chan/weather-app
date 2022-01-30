@@ -157,3 +157,9 @@ button {
 .forecast-date {
   text-align: center;
 }
+
+.forecast-text {
+  text-align: center;
+  position: relative;
+  top: -10px;
+}
