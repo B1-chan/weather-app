@@ -66,7 +66,7 @@ function displayForecast(response) {
                 <div class="col-3">
                   <img src="images/${
                     forecastDay.weather[0].icon
-                  }.jpg" alt="sun" width="80%" />
+                  }.png" alt="sun" width="80%" />
                 <div class="forecast-temperatures">
                   <span class="forecast-temperature-max">${Math.round(
                     forecastDay.temp.max
@@ -117,7 +117,7 @@ function getCurrentTemp(response) {
 
   iconElement.setAttribute(
     "src",
-    `images/${response.data.weather[0].icon}.jpg`
+    `images/${response.data.weather[0].icon}.png`
   );
   iconElement.setAttribute("alt", response.data.weather[0].description);
 
