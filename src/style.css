@@ -69,6 +69,7 @@ button {
   padding: 20px;
   margin: 30px auto;
   max-width: 800px;
+  background: linear-gradient(to top, #cd9cf2 0%, #f6f3ff 100%);
 }
 
 .current {
@@ -76,7 +77,7 @@ button {
   border-radius: 5px;
   max-width: 350px;
   margin: auto;
-  background: white;
+  background: linear-gradient(to top, #dad4ec 0%, #dad4ec 1%, #f3e7e9 100%);
 }
 
 .info {
@@ -85,7 +86,7 @@ button {
   max-width: 350px;
   margin: 0 0 auto;
   margin-right: auto;
-  background-color: white;
+  background: linear-gradient(to top, #dad4ec 0%, #dad4ec 1%, #f3e7e9 100%);
 }
 
 .current-text {
