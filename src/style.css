@@ -69,7 +69,7 @@ button {
   padding: 20px;
   margin: 30px auto;
   max-width: 800px;
-  background: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
+  background: linear-gradient(to top, #dad4ec 0%, #dad4ec 1%, #f3e7e9 100%);
 }
 
 .current {
