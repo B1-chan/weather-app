@@ -2,8 +2,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@700&display=swap");
 
 body {
-  margin: 0;
-  padding: 0;
   font-family: "Itim", cursive;
   background: url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/025/887/original/back.jpg?1643433414);
   background-size: cover;
