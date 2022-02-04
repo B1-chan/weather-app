@@ -137,6 +137,9 @@ function getCurrentCityTemp(event) {
     axios.get(currentUrl).then(getCurrentTemp);
   }
   navigator.geolocation.getCurrentPosition(handlePosition);
+
+  celsiusLink.classList.add("active");
+  fahrenheitLink.classList.remove("active");
 }
 let currentCityButton = document.querySelector("#current-button");
 currentCityButton.addEventListener("click", getCurrentCityTemp);
@@ -148,6 +151,9 @@ function searchCityTemp(event) {
   let apiKey = "b17588c7696fb561b494319a7441ef17";
   let searchUrl = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apiKey}&units=metric`;
   axios.get(searchUrl).then(getCurrentTemp);
+
+  celsiusLink.classList.add("active");
+  fahrenheitLink.classList.remove("active");
 }
 
 function displayFahrenheitTemperature(event) {
